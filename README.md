@@ -1,4 +1,16 @@
-# The Carpentries Workbench Template R Markdown Lesson
+# Scheme Novice
+
+This lesson is based on the
+[Spritely Institute Scheme Primer](https://files.spritely.institute/papers/scheme-primer.html)
+
+It can be completed fully online using
+[http://try.gambitscheme.org](http://try.gambitscheme.org/).
+
+You can also install the [Gambit Scheme interpreter](http://gambitscheme.org/latest/)
+on a computer and complete the lesson.
+
+
+## The Carpentries Workbench Template R Markdown Lesson
 
 This lesson is a template lesson that uses [The Carpentries Workbench][workbench].
 

@@ -44,6 +44,9 @@ Notices:
 
 ## Software
 
+The Scheme snippets are available under the Apache-2.0
+license.
+
 Except where otherwise noted, the example programs and other software provided
 by The Carpentries are made available under the [OSI][osi]-approved [MIT
 license][mit-license].

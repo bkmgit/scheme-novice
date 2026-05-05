@@ -394,7 +394,7 @@ reinforce the objectives.</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Output </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -423,7 +423,7 @@ challenge blocks?</h3>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>You can add a line with at least three colons and a
 <code>solution</code> tag.</p>
@@ -507,17 +507,17 @@ Scheme Primer</a> ported to Gambit Scheme.</p>
 <div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">SCHEME<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode scheme" tabindex="0"><code class="sourceCode scheme"><span id="cb1-1"><a href="#cb1-1" tabindex="-1" aria-label="code-block-1-1"></a>(<span class="ex">define</span><span class="fu"> </span>(chatty-add chatty-name <span class="op">.</span> nums)                                                   </span>
+<pre class="sourceCode scheme" tabindex="0"><code class="sourceCode scheme"><span id="cb1-1"><a href="#cb1-1" tabindex="-1" aria-label="code-block-1-1"></a>(<span class="ex">define</span><span class="fu"> </span>(<span class="fu">chatty-add </span>chatty-name <span class="op">.</span> nums)                                                   </span>
 <span id="cb1-2"><a href="#cb1-2" tabindex="-1" aria-label="code-block-1-2"></a>     (<span class="kw">string-append</span> chatty-name <span class="st">", If you add these together you get "</span> (<span class="kw">number-&gt;string</span> (apply <span class="op">+</span> nums)) <span class="st">"!</span><span class="ch">\n</span><span class="st">"</span>))</span></code></pre>
 </div>
 <div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">SCHEME<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode scheme" tabindex="0"><code class="sourceCode scheme"><span id="cb2-1"><a href="#cb2-1" tabindex="-1" aria-label="code-block-2-1"></a>(<span class="ex">define</span><span class="fu"> </span>(shopkeeper thing-to-buy    </span>
-<span id="cb2-2"><a href="#cb2-2" tabindex="-1" aria-label="code-block-2-2"></a>           <span class="ex">#!optional</span> (how-many <span class="dv">1</span>)</span>
-<span id="cb2-3"><a href="#cb2-3" tabindex="-1" aria-label="code-block-2-3"></a>           (cost <span class="dv">20</span>)</span>
-<span id="cb2-4"><a href="#cb2-4" tabindex="-1" aria-label="code-block-2-4"></a>           <span class="ex">#!key</span> (shopkeeper <span class="st">"Sammy"</span>)</span>
-<span id="cb2-5"><a href="#cb2-5" tabindex="-1" aria-label="code-block-2-5"></a>           (store <span class="st">"Plentiful Great Produce"</span>))</span>
+<pre class="sourceCode scheme" tabindex="0"><code class="sourceCode scheme"><span id="cb2-1"><a href="#cb2-1" tabindex="-1" aria-label="code-block-2-1"></a>(<span class="ex">define</span><span class="fu"> </span>(<span class="fu">shopkeeper </span>thing-to-buy    </span>
+<span id="cb2-2"><a href="#cb2-2" tabindex="-1" aria-label="code-block-2-2"></a>           <span class="ex">#!optional</span> (<span class="fu">how-many </span><span class="dv">1</span>)</span>
+<span id="cb2-3"><a href="#cb2-3" tabindex="-1" aria-label="code-block-2-3"></a>           (<span class="fu">cost </span><span class="dv">20</span>)</span>
+<span id="cb2-4"><a href="#cb2-4" tabindex="-1" aria-label="code-block-2-4"></a>           <span class="ex">#!key</span> (<span class="fu">shopkeeper </span><span class="st">"Sammy"</span>)</span>
+<span id="cb2-5"><a href="#cb2-5" tabindex="-1" aria-label="code-block-2-5"></a>           (<span class="fu">store </span><span class="st">"Plentiful Great Produce"</span>))</span>
 <span id="cb2-6"><a href="#cb2-6" tabindex="-1" aria-label="code-block-2-6"></a>           (<span class="kw">display</span></span>
 <span id="cb2-7"><a href="#cb2-7" tabindex="-1" aria-label="code-block-2-7"></a>            (<span class="kw">string-append</span> <span class="st">"You walk into "</span></span>
 <span id="cb2-8"><a href="#cb2-8" tabindex="-1" aria-label="code-block-2-8"></a>                           store</span>
@@ -697,8 +697,8 @@ any links that you are not going to use.
   "url": "https://bkmgit.github.io/scheme-novice/aio.html",
   "identifier": "https://bkmgit.github.io/scheme-novice/aio.html",
   "dateCreated": "2025-06-27",
-  "dateModified": "2026-04-28",
-  "datePublished": "2026-04-28"
+  "dateModified": "2026-05-05",
+  "datePublished": "2026-05-05"
 }
 
   </script><script>

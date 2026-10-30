@@ -17,4 +17,4 @@
 "profiles/dzidzorli-obeng.Rmd" "db737b8d45e4bfa823ab4a6ae3962beb" "site/built/dzidzorli-obeng.md" "2026-10-30"
 "profiles/haniah-tamakloe.Rmd" "41b8c3221a9b4e14199ceb1baf07c403" "site/built/haniah-tamakloe.md" "2026-10-30"
 "profiles/majid-quansah.Rmd" "c6cb6d67c39bc9551ead40240b62afa8" "site/built/majid-quansah.md" "2026-10-30"
-"renv/profiles/lesson-requirements/renv.lock" "bdbacb8a1d5ab6d05eca4aa80519187c" "site/built/renv.lock" "2026-10-30"
+"renv/profiles/lesson-requirements/renv.lock" "a34b0c32366bdf3b61ce505a3cf0d134" "site/built/renv.lock" "2026-10-30"

@@ -16,6 +16,9 @@
     <loc>https://bkmgit.github.io/scheme-novice/citation.html</loc>
   </url>
   <url>
+    <loc>https://bkmgit.github.io/scheme-novice/closures.html</loc>
+  </url>
+  <url>
     <loc>https://bkmgit.github.io/scheme-novice/conditionals-and-predicates.html</loc>
   </url>
   <url>
@@ -40,6 +43,9 @@
     <loc>https://bkmgit.github.io/scheme-novice/instructor/citation.html</loc>
   </url>
   <url>
+    <loc>https://bkmgit.github.io/scheme-novice/instructor/closures.html</loc>
+  </url>
+  <url>
     <loc>https://bkmgit.github.io/scheme-novice/instructor/conditionals-and-predicates.html</loc>
   </url>
   <url>
@@ -55,7 +61,19 @@
     <loc>https://bkmgit.github.io/scheme-novice/instructor/introduction.html</loc>
   </url>
   <url>
+    <loc>https://bkmgit.github.io/scheme-novice/instructor/iteration-and-recursion.html</loc>
+  </url>
+  <url>
     <loc>https://bkmgit.github.io/scheme-novice/instructor/key-points.html</loc>
+  </url>
+  <url>
+    <loc>https://bkmgit.github.io/scheme-novice/instructor/lists-and-cons.html</loc>
+  </url>
+  <url>
+    <loc>https://bkmgit.github.io/scheme-novice/instructor/methods.html</loc>
+  </url>
+  <url>
+    <loc>https://bkmgit.github.io/scheme-novice/instructor/mutation-assignment-and-other-side-effects.html</loc>
   </url>
   <url>
     <loc>https://bkmgit.github.io/scheme-novice/instructor/profiles.html</loc>
@@ -73,7 +91,19 @@
     <loc>https://bkmgit.github.io/scheme-novice/introduction.html</loc>
   </url>
   <url>
+    <loc>https://bkmgit.github.io/scheme-novice/iteration-and-recursion.html</loc>
+  </url>
+  <url>
     <loc>https://bkmgit.github.io/scheme-novice/key-points.html</loc>
+  </url>
+  <url>
+    <loc>https://bkmgit.github.io/scheme-novice/lists-and-cons.html</loc>
+  </url>
+  <url>
+    <loc>https://bkmgit.github.io/scheme-novice/methods.html</loc>
+  </url>
+  <url>
+    <loc>https://bkmgit.github.io/scheme-novice/mutation-assignment-and-other-side-effects.html</loc>
   </url>
   <url>
     <loc>https://bkmgit.github.io/scheme-novice/profiles.html</loc>

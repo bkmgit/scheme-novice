@@ -1,0 +1,119 @@
+---
+title: "Mutation, assignment, and other kinds of side effects"
+teaching: 10
+exercises: 2
+---
+
+:::::::::::::::::::::::::::::::::::::: questions 
+
+- How can we reassign variables?
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::: objectives
+
+- Learn how to use set!
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+```scheme
+(define chest 'sword)
+chest
+```
+
+```scheme
+(set! chest 'gold)
+chest
+```
+
+```scheme
+(define (make-countdown n)
+ (lambda ()
+  (define last-n n)
+  (cond
+   ((zero? n)
+    0)
+   (else
+    (begin
+     (set! n (- n 1))
+      last-n)))))
+```
+
+```scheme
+(define cdown (make-countdown 3))
+```
+
+```scheme
+(cdown)
+```
+
+```scheme
+(cdown)
+```
+
+```scheme
+(cdown)
+```
+
+```scheme
+(cdown)
+```
+
+```scheme
+(cdown)
+```
+
+```scheme
+(cdown)
+```
+
+
+```scheme
+(define vec (vector 'a 'b 'c))
+vec
+```
+
+```scheme
+(vector-ref vec 1)
+```
+
+```scheme
+(vector-set! vec 1 'boop)
+(vector-ref vec 1)
+```
+
+```scheme
+vec
+```
+
+::::::::::::::::::::::::::::::::::::: challenge 
+
+## Challenge 1: Can you do it?
+
+What is the output of this command?
+
+```scheme
+(display "Hello World!\n")
+```
+
+:::::::::::::::::::::::: solution 
+
+## Output
+ 
+```output
+Hello World!
+```
+
+:::::::::::::::::::::::::::::::::
+
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+::::::::::::::::::::::::::::::::::::: keypoints 
+
+- It is possible to create functions in scheme that have a state
+- In typical scheme program, most functions are stateless
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+

@@ -70,10 +70,11 @@ episodes:
 #- arithmetic.Rmd
 - variables-and-procedures.Rmd
 - conditionals-and-predicates.Rmd
-#- closures.Rmd
-#- iteration-and-recursion.Rmd
-#- side-effects.Rmd
-#- extensibility.Rmd
+- lists-and-cons.Rmd
+- closures.Rmd
+- iteration-and-recursion.Rmd
+- mutation-assignment-and-other-side-effects.Rmd
+- methods.Rmd
 #- scheme-in-scheme.Rmd
 
 # Information for Learners

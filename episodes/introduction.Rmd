@@ -14,28 +14,16 @@ exercises: 2
 
 - Understand how Scheme relates to other programming languages
 - Know about some Scheme implementations
+- Query different types in Scheme
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ## Introduction
 
+Scheme is a programming language within the lisp family of programming
+languages.  There are many implementations of Scheme, this lesson will
+use [Gambit Scheme](http://gambitscheme.org/).
 
-What you need to know is that there are three sections required for a valid
-Carpentries lesson template:
-
- 1. `questions` are displayed at the beginning of the episode to prime the
-    learner for the content.
- 2. `objectives` are the learning objectives for an episode displayed with
-    the questions.
- 3. `keypoints` are displayed at the end of the episode to reinforce the
-    objectives.
-
-:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: instructor
-
-Inline instructor notes can help inform instructors of timing challenges
-associated with the lessons. They appear in the "Instructor View"
-
-::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: challenge 
 
@@ -58,28 +46,85 @@ Hello World!
 :::::::::::::::::::::::::::::::::
 
 
-## Challenge 2: how do you nest solutions within challenge blocks?
+::::::::::::::::::::::::::::::::::::::::::::::::
 
-:::::::::::::::::::::::: solution 
+### Types in Scheme
 
-You can add a line with at least three colons and a `solution` tag.
+```scheme
+(string? "abc")
+```
+
+```scheme
+(string? 123)
+```
+
+```scheme
+(string? "123")
+```
+
+```scheme
+(integer? 123)
+```
+
+```scheme
+(integer? "123")
+```
+
+```scheme
+(boolean? #t)
+```
+
+```scheme
+(flonum? 0.123)
+```
+
+```scheme
+(fixnum? 12)
+```
+
+```scheme
+(number? 12.1)
+```
+
+```scheme
+(rational? 5/6)
+```
+
+```scheme
+(real? 2+3i)
+```
+
+```scheme
+(complex? 2+3i)
+```
+
+```scheme
+(char? #\g)
+```
+
+
+::::::::::::::::::::::::::::::::::::: challenge
+
+## Challenge 2: Can you do it?
+
+What is the output of this command?
+
+```scheme
+(string? (number->string (+ 3 6)))
+```
+
+:::::::::::::::::::::::: solution
+
+## Output
+
+```output
+#t
+```
 
 :::::::::::::::::::::::::::::::::
-::::::::::::::::::::::::::::::::::::::::::::::::
 
-
-::::::::::::::::::::::::::::::::::::: callout
-
-Callout sections can highlight information.
-
-They are sometimes used to emphasise particularly important points
-but are also used in some lessons to present "asides": 
-content that is not central to the narrative of the lesson,
-e.g. by providing the answer to a commonly-asked question.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
-
-
 
 ::::::::::::::::::::::::::::::::::::: keypoints 
 

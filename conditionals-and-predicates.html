@@ -358,7 +358,7 @@
       </div>
     </nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Conditionals and Predicates</h1>
-        <p>Last updated on 2026-10-30 |
+        <p>Last updated on 2026-10-31 |
 
         <a href="https://github.com/bkmgit/scheme-novice/edit/main/episodes/conditionals-and-predicates.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -404,8 +404,8 @@
 <span id="cb1-7"><a href="#cb1-7" tabindex="-1" aria-label="code-block-1-7"></a>    (<span class="kw">else</span></span>
 <span id="cb1-8"><a href="#cb1-8" tabindex="-1" aria-label="code-block-1-8"></a>      <span class="st">"Just right!"</span>)))</span></code></pre>
 </div>
-<p>``scheme (define (a-list (list 1 2 3))) (define (b-list (list 1 2
-3))) (equal? a-list a-list)</p>
+<p>``scheme (define a-list (list 1 2 3)) (define b-list (list 1 2 3))
+(equal? a-list a-list)</p>
 <pre><code>
 ```scheme
 (eq? a-list a-list)</code></pre>
@@ -439,11 +439,17 @@
 <span id="cb7-5"><a href="#cb7-5" tabindex="-1" aria-label="code-block-7-5"></a>   (<span class="kw">else</span></span>
 <span id="cb7-6"><a href="#cb7-6" tabindex="-1" aria-label="code-block-7-6"></a>     <span class="st">"Fruit not found. Gadzooks!"</span>))</span></code></pre>
 </div>
-<p>``scheme (define (fruit-basket ’(apple banana lemon)) (fruit-sleuth
-’banana fruit-basket)</p>
-<pre><code>
-```scheme
-(fruit-sleuth 'orange fruit-basket)</code></pre>
+<div class="codewrapper sourceCode" id="cb8">
+<h3 class="code-label">SCHEME<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode scheme" tabindex="0"><code class="sourceCode scheme"><span id="cb8-1"><a href="#cb8-1" tabindex="-1" aria-label="code-block-8-1"></a>(<span class="ex">define</span><span class="fu"> </span>(<span class="fu">fruit-basket </span>'(apple banana lemon))</span>
+<span id="cb8-2"><a href="#cb8-2" tabindex="-1" aria-label="code-block-8-2"></a>(fruit-sleuth 'banana fruit-basket)</span></code></pre>
+</div>
+<div class="codewrapper sourceCode" id="cb9">
+<h3 class="code-label">SCHEME<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode scheme" tabindex="0"><code class="sourceCode scheme"><span id="cb9-1"><a href="#cb9-1" tabindex="-1" aria-label="code-block-9-1"></a>(fruit-sleuth 'orange fruit-basket)</span></code></pre>
+</div>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
@@ -520,8 +526,8 @@ any links that you are not going to use.
   "url": "https://bkmgit.github.io/scheme-novice/conditionals-and-predicates.html",
   "identifier": "https://bkmgit.github.io/scheme-novice/conditionals-and-predicates.html",
   "dateCreated": "2025-06-27",
-  "dateModified": "2026-10-30",
-  "datePublished": "2026-10-30"
+  "dateModified": "2026-10-31",
+  "datePublished": "2026-10-31"
 }
 
   </script><script>

@@ -31,8 +31,8 @@ exercises: 2
 
 
 ``scheme
-(define (a-list (list 1 2 3)))
-(define (b-list (list 1 2 3)))
+(define a-list (list 1 2 3))
+(define b-list (list 1 2 3))
 (equal? a-list a-list)
 ```
 
@@ -65,7 +65,7 @@ exercises: 2
      "Fruit not found. Gadzooks!"))
 ```
 
-``scheme
+```scheme
 (define (fruit-basket '(apple banana lemon))
 (fruit-sleuth 'banana fruit-basket)
 ```

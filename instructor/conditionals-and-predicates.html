@@ -406,51 +406,102 @@
 <span id="cb1-7"><a href="#cb1-7" tabindex="-1" aria-label="code-block-1-7"></a>    (<span class="kw">else</span></span>
 <span id="cb1-8"><a href="#cb1-8" tabindex="-1" aria-label="code-block-1-8"></a>      <span class="st">"Just right!"</span>)))</span></code></pre>
 </div>
-<p>``scheme (define a-list (list 1 2 3)) (define b-list (list 1 2 3))
-(equal? a-list a-list)</p>
-<pre><code>
-```scheme
-(eq? a-list a-list)</code></pre>
+<div id="challenge-1-can-you-do-it" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<span class="callout-header">Challenge</span>
+<div id="challenge-1-can-you-do-it" class="callout-inner">
+<h3 class="callout-title">Challenge 1: Can you do it?</h3>
+<div class="callout-content">
+<p>Can you think of a sequence of inputs for which the above program
+would work, but which do not reflect the intention of the programmer? If
+so, how might these be fixed?</p>
+</div>
+</div>
+</div>
+<div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
+  <h4 class="accordion-header" id="headingSolution1">
+  Answer
+  </h4>
+</button>
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div class="accordion-body">
+<p>There is no check that the smallest value is less than or equal to
+the biggest value. One can check this, and possibly also check that the
+inputs are numbers.</p>
+<div class="codewrapper sourceCode" id="cb2">
+<h3 class="code-label">SCHEME<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode scheme" tabindex="0"><code class="sourceCode scheme"><span id="cb2-1"><a href="#cb2-1" tabindex="-1" aria-label="code-block-2-1"></a>(<span class="ex">define</span><span class="fu"> </span>(<span class="fu">goldilocks </span>n smallest-ok biggest-ok)</span>
+<span id="cb2-2"><a href="#cb2-2" tabindex="-1" aria-label="code-block-2-2"></a>  (<span class="kw">cond</span></span>
+<span id="cb2-3"><a href="#cb2-3" tabindex="-1" aria-label="code-block-2-3"></a>    ((<span class="op">&gt;</span> smallest-ok biggest-ok)</span>
+<span id="cb2-4"><a href="#cb2-4" tabindex="-1" aria-label="code-block-2-4"></a>     <span class="st">"Input error:</span><span class="ch">\n</span><span class="st">  The smallest desired value is bigger than the biggest desired value"</span>)</span>
+<span id="cb2-5"><a href="#cb2-5" tabindex="-1" aria-label="code-block-2-5"></a>    ((<span class="op">&lt;</span> n smallest-ok)</span>
+<span id="cb2-6"><a href="#cb2-6" tabindex="-1" aria-label="code-block-2-6"></a>     <span class="st">"Too small"</span>)</span>
+<span id="cb2-7"><a href="#cb2-7" tabindex="-1" aria-label="code-block-2-7"></a>    ((<span class="op">&gt;</span> n biggest-ok)</span>
+<span id="cb2-8"><a href="#cb2-8" tabindex="-1" aria-label="code-block-2-8"></a>     <span class="st">"Too big"</span>)</span>
+<span id="cb2-9"><a href="#cb2-9" tabindex="-1" aria-label="code-block-2-9"></a>    (<span class="kw">else</span></span>
+<span id="cb2-10"><a href="#cb2-10" tabindex="-1" aria-label="code-block-2-10"></a>      <span class="st">"Just right!"</span>)))</span></code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
 <div class="codewrapper sourceCode" id="cb3">
 <h3 class="code-label">SCHEME<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode scheme" tabindex="0"><code class="sourceCode scheme"><span id="cb3-1"><a href="#cb3-1" tabindex="-1" aria-label="code-block-3-1"></a>(<span class="kw">eq?</span> a-list b-list)</span></code></pre>
+<pre class="sourceCode scheme" tabindex="0"><code class="sourceCode scheme"><span id="cb3-1"><a href="#cb3-1" tabindex="-1" aria-label="code-block-3-1"></a>(<span class="ex">define</span><span class="fu"> a-list </span>(<span class="kw">list</span> <span class="dv">1</span> <span class="dv">2</span> <span class="dv">3</span>))</span>
+<span id="cb3-2"><a href="#cb3-2" tabindex="-1" aria-label="code-block-3-2"></a>(<span class="ex">define</span><span class="fu"> b-list </span>(<span class="kw">list</span> <span class="dv">1</span> <span class="dv">2</span> <span class="dv">3</span>))</span>
+<span id="cb3-3"><a href="#cb3-3" tabindex="-1" aria-label="code-block-3-3"></a>(<span class="kw">equal?</span> a-list a-list)</span></code></pre>
 </div>
 <div class="codewrapper sourceCode" id="cb4">
 <h3 class="code-label">SCHEME<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode scheme" tabindex="0"><code class="sourceCode scheme"><span id="cb4-1"><a href="#cb4-1" tabindex="-1" aria-label="code-block-4-1"></a>(<span class="kw">equal?</span> a-list b-list)</span></code></pre>
+<pre class="sourceCode scheme" tabindex="0"><code class="sourceCode scheme"><span id="cb4-1"><a href="#cb4-1" tabindex="-1" aria-label="code-block-4-1"></a>(<span class="kw">eq?</span> a-list a-list)</span></code></pre>
 </div>
 <div class="codewrapper sourceCode" id="cb5">
 <h3 class="code-label">SCHEME<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode scheme" tabindex="0"><code class="sourceCode scheme"><span id="cb5-1"><a href="#cb5-1" tabindex="-1" aria-label="code-block-5-1"></a>(<span class="kw">member</span> 'b '(a b c))</span></code></pre>
+<pre class="sourceCode scheme" tabindex="0"><code class="sourceCode scheme"><span id="cb5-1"><a href="#cb5-1" tabindex="-1" aria-label="code-block-5-1"></a>(<span class="kw">eq?</span> a-list b-list)</span></code></pre>
 </div>
 <div class="codewrapper sourceCode" id="cb6">
 <h3 class="code-label">SCHEME<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode scheme" tabindex="0"><code class="sourceCode scheme"><span id="cb6-1"><a href="#cb6-1" tabindex="-1" aria-label="code-block-6-1"></a>(<span class="kw">member</span> 'z '(a b c))</span></code></pre>
+<pre class="sourceCode scheme" tabindex="0"><code class="sourceCode scheme"><span id="cb6-1"><a href="#cb6-1" tabindex="-1" aria-label="code-block-6-1"></a>(<span class="kw">equal?</span> a-list b-list)</span></code></pre>
 </div>
 <div class="codewrapper sourceCode" id="cb7">
 <h3 class="code-label">SCHEME<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode scheme" tabindex="0"><code class="sourceCode scheme"><span id="cb7-1"><a href="#cb7-1" tabindex="-1" aria-label="code-block-7-1"></a>(<span class="ex">define</span><span class="fu"> </span>(<span class="fu">fruit-sleuth </span>fruit-basket)</span>
-<span id="cb7-2"><a href="#cb7-2" tabindex="-1" aria-label="code-block-7-2"></a>  (<span class="kw">cond</span></span>
-<span id="cb7-3"><a href="#cb7-3" tabindex="-1" aria-label="code-block-7-3"></a>   ((<span class="kw">member</span> fruit-basket)</span>
-<span id="cb7-4"><a href="#cb7-4" tabindex="-1" aria-label="code-block-7-4"></a>    <span class="st">"Found the fruit you are looking for!"</span>)</span>
-<span id="cb7-5"><a href="#cb7-5" tabindex="-1" aria-label="code-block-7-5"></a>   (<span class="kw">else</span></span>
-<span id="cb7-6"><a href="#cb7-6" tabindex="-1" aria-label="code-block-7-6"></a>     <span class="st">"Fruit not found. Gadzooks!"</span>))</span></code></pre>
+<pre class="sourceCode scheme" tabindex="0"><code class="sourceCode scheme"><span id="cb7-1"><a href="#cb7-1" tabindex="-1" aria-label="code-block-7-1"></a>(<span class="kw">member</span> 'b '(a b c))</span></code></pre>
 </div>
 <div class="codewrapper sourceCode" id="cb8">
 <h3 class="code-label">SCHEME<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode scheme" tabindex="0"><code class="sourceCode scheme"><span id="cb8-1"><a href="#cb8-1" tabindex="-1" aria-label="code-block-8-1"></a>(<span class="ex">define</span><span class="fu"> </span>(<span class="fu">fruit-basket </span>'(apple banana lemon))</span>
-<span id="cb8-2"><a href="#cb8-2" tabindex="-1" aria-label="code-block-8-2"></a>(fruit-sleuth 'banana fruit-basket)</span></code></pre>
+<pre class="sourceCode scheme" tabindex="0"><code class="sourceCode scheme"><span id="cb8-1"><a href="#cb8-1" tabindex="-1" aria-label="code-block-8-1"></a>(<span class="kw">member</span> 'z '(a b c))</span></code></pre>
 </div>
 <div class="codewrapper sourceCode" id="cb9">
 <h3 class="code-label">SCHEME<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode scheme" tabindex="0"><code class="sourceCode scheme"><span id="cb9-1"><a href="#cb9-1" tabindex="-1" aria-label="code-block-9-1"></a>(fruit-sleuth 'orange fruit-basket)</span></code></pre>
+<pre class="sourceCode scheme" tabindex="0"><code class="sourceCode scheme"><span id="cb9-1"><a href="#cb9-1" tabindex="-1" aria-label="code-block-9-1"></a>(<span class="ex">define</span><span class="fu"> </span>(<span class="fu">fruit-sleuth </span>fruit-basket)</span>
+<span id="cb9-2"><a href="#cb9-2" tabindex="-1" aria-label="code-block-9-2"></a>  (<span class="kw">cond</span></span>
+<span id="cb9-3"><a href="#cb9-3" tabindex="-1" aria-label="code-block-9-3"></a>   ((<span class="kw">member</span> fruit-basket)</span>
+<span id="cb9-4"><a href="#cb9-4" tabindex="-1" aria-label="code-block-9-4"></a>    <span class="st">"Found the fruit you are looking for!"</span>)</span>
+<span id="cb9-5"><a href="#cb9-5" tabindex="-1" aria-label="code-block-9-5"></a>   (<span class="kw">else</span></span>
+<span id="cb9-6"><a href="#cb9-6" tabindex="-1" aria-label="code-block-9-6"></a>     <span class="st">"Fruit not found. Gadzooks!"</span>))</span></code></pre>
+</div>
+<div class="codewrapper sourceCode" id="cb10">
+<h3 class="code-label">SCHEME<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode scheme" tabindex="0"><code class="sourceCode scheme"><span id="cb10-1"><a href="#cb10-1" tabindex="-1" aria-label="code-block-10-1"></a>(<span class="ex">define</span><span class="fu"> </span>(<span class="fu">fruit-basket </span>'(apple banana lemon))</span>
+<span id="cb10-2"><a href="#cb10-2" tabindex="-1" aria-label="code-block-10-2"></a>(fruit-sleuth 'banana fruit-basket)</span></code></pre>
+</div>
+<div class="codewrapper sourceCode" id="cb11">
+<h3 class="code-label">SCHEME<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode scheme" tabindex="0"><code class="sourceCode scheme"><span id="cb11-1"><a href="#cb11-1" tabindex="-1" aria-label="code-block-11-1"></a>(fruit-sleuth 'orange fruit-basket)</span></code></pre>
 </div>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">

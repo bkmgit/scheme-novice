@@ -29,8 +29,42 @@ exercises: 2
       "Just right!")))
 ```
 
+::::::::::::::::::::::::::::::::::::: challenge
 
-``scheme
+## Challenge 1: Can you do it?
+
+Can you think of a sequence of inputs for which the above program would work,
+but which do not reflect the intention of the programmer?  If so, how might
+these be fixed?
+
+:::::::::::::::::::::::: solution
+
+
+## Answer
+
+There is no check that the smallest value is less than or equal to the
+biggest value.  One can check this, and possibly also check that the inputs
+are numbers.
+
+```scheme
+(define (goldilocks n smallest-ok biggest-ok)
+  (cond
+    ((> smallest-ok biggest-ok)
+     "Input error:\n  The smallest desired value is bigger than the biggest desired value")
+    ((< n smallest-ok)
+     "Too small")
+    ((> n biggest-ok)
+     "Too big")
+    (else
+      "Just right!")))
+```
+
+:::::::::::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+```scheme
 (define a-list (list 1 2 3))
 (define b-list (list 1 2 3))
 (equal? a-list a-list)
